@@ -217,6 +217,9 @@ main .main-text p {
         font-size: 70px;
         margin: 20px 0;
     }
+    main .main-text p{
+        margin-bottom: 10px;
+    }
 }
 
 /* ? end-main */
