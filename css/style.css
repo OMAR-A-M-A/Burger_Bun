@@ -180,13 +180,13 @@ main .main-text h1 {
 
     &:hover {
         background-color: transparent;
-        color: var(--main-color);
+        color: var(--secondary-color);
     }
 }
 
 .btns button:last-child {
     background-color: transparent;
-    color: var(--main-color);
+    color: var(--secondary-color);
     transition: 0.3s;
 
     &:hover {
