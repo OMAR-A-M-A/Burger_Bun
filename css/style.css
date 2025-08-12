@@ -1,0 +1,346 @@
+/* ? intialize the m-color, s-color, t-color */
+:root {
+    --main-color: white;
+    --secondary-color: #f8ae33;
+    --section-color: #eeebeb;
+    --text-color: #777;
+    --main-padding: 60px 0;
+}
+
+/* ? intialize the font we use */
+@font-face {
+    font-family: "work-sans";
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+/*? start global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: work-sans;
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*? small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*? medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+}
+
+/*? large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*? end global rules */
+
+/* ? start header */
+header {
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo .logo-img {
+    width: 30px;
+}
+
+header .logo .logo-text {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 600;
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+header nav {
+    width: 30%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+header nav ul li a:hover{
+    color: var(--secondary-color);
+}
+
+@media (max-width:1000px) {
+    header .container {
+        display: block;
+    }
+
+    .container nav {
+        width: 100%;
+        background-color: #f6f6f617;
+        border-radius: 4px;
+        margin: 20px 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li {
+        padding: 10px 0;
+    }
+
+    header nav ul li:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* ? end header */
+/* ? start-main */
+main {
+    background-image: url(../images/banner.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+main .main-text {
+    color: var(--section-color);
+    margin: 100px 0;
+    max-width: 100%;
+}
+
+main .main-text .text {
+    max-width: 500px;
+    min-width: 300px;
+}
+
+main .main-text span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main .main-text h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    margin: 20px 0 30px;
+    -webkit-text-stroke: var(--main-color) 1px;
+    color: transparent;
+}
+
+.btn {
+    max-width: 100%;
+    width: 500px;
+}
+
+.btns button {
+    border: 1px var(--secondary-color) solid;
+    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    margin: 5px 15px;
+}
+
+.btns button:first-child {
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+}
+
+.btns button:last-child {
+    background-color: transparent;
+    color: var(--main-color);
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--secondary-color);
+        color: black;
+    }
+}
+
+main .main-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    word-spacing: 3px;
+    margin-bottom: 35px;
+    word-break: keep-all;
+}
+
+@media(max-width:1000px) {
+    main .main-text {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    main .main-text .text {
+        max-width: 100%;
+    }
+
+    main .main-text h1 {
+        font-size: 70px;
+        margin: 20px 0;
+    }
+}
+
+/* ? end-main */
+/* ?start about */
+.about {
+    padding: var(--main-padding);
+    background-color: var(--section-color);
+}
+
+.about .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.about .container .card {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.about .container .card h3 {
+    font-weight: 600;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.about .container .card p {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 17px;
+    color: var(--text-color);
+    padding-bottom: 20px;
+}
+
+.about .container .card a {
+    line-height: 1.8;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        color: var(--secondary-color)
+    }
+}
+
+/* ? end-about */
+/* ? start-menu */
+.menu {
+    padding: var(--main-padding);
+}
+
+.menu .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.menu .container ul {
+    list-style: '\2661';
+    color: var(--text-color);
+    font-size: 25px;
+    margin-top: 50px;
+    justify-self: flex-start;
+}
+
+.menu .container ul li {
+    padding: 25px 0 25px 10px;
+}
+
+.menu .container ul li::marker {
+    color: var(--secondary-color);
+}
+
+.menu .container img {
+    max-width: 100%;
+    justify-self: flex-end;
+}
+
+@media (max-width:1199px) {
+
+    .menu .container ul,
+    .menu .container img {
+        justify-self: center;
+    }
+}
+
+/* ? end-menu */
+/* ?start-contact */
+.contact {
+    background-image: url(../images/bg.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h2{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size:35px;
+    margin-bottom: 30px;
+}
+.contact h2 span{
+    color: var(--secondary-color);
+}
+/* ?end-contact */
+/* ?start-footer */
+.footer {
+    background-color:#063249 ;
+    color: var(--main-color);
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 18px;
+}
+.footer span {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+/* ?end-footer */
